@@ -147,3 +147,17 @@ h1 {
     width: calc(100% - 20px);
   }
 }
+
+/* Error message */
+.error-message {
+  color: #ff0000; /* Red color for error message */
+  margin-top: 10px;
+}
+
+/* Loader container */
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of viewport */
+}

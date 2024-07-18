@@ -1,18 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
+import "./SearchBar.css";
 
-const SearchBar = ({ onSearch }) => {
-  const [query, setQuery] = useState("");
+const SearchBar = ({ query, setQuery, fetchMovies }) => {
+  const handleInputChange = (e) => {
+    setQuery(e.target.value);
+  };
 
   const handleSearch = () => {
-    onSearch(query);
+    fetchMovies();
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === "Enter") {
+      fetchMovies();
+    }
   };
 
   return (
     <div className="search-bar">
       <input
+        id="search-input"
         type="text"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={handleInputChange}
+        onKeyPress={handleKeyPress}
         placeholder="Search for movies..."
       />
       <button onClick={handleSearch}>Search</button>
