@@ -29,42 +29,35 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Steps to Complete the Assignment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Environment Setup:**
+    - **Node.js**: Make sure you have Node.js installed on your machine.
+    - **React**: Create a new React project using the Create React App.
+2. **Creating the Search Bar:**
+    - Design and implement a search bar where users can enter a movie name.
+    - When a user submits a query, construct a URL for the Open Library Search API to fetch data about the movie.
+3. **Fetching Data from the Open Library API:**
+    - Use the endpoint `https://openlibrary.org/search.json` to search for movies.
+    - Example URL format:
+        - `https://openlibrary.org/search.json?q=the+lord+of+the+rings`
+        - You will append the movie name entered in the search bar to this URL to fetch the relevant data.
+4. **Handling API Response:**
+    - Process the API response to retrieve relevant information such as the title, author, publication date, etc.
+    - If the API returns multiple books, handle it to manage o- r filter the results as needed.
+5. **Creating Cards for Display:**
+    - For each movie retrieved, create a card component.
+    - Each card should have an image and relevant movie data.
+    - Fetch a random dog image from `https://dog.ceo/api/breeds/image/random` for each card.
+6. **Displaying the Cards:**
+    - Display the cards dynamically based on the search results.
+    - Ensure each card shows at least the title and a random dog image.
+7. **Making Components Generic:**
+    - Design your React components in a reusable manner. This means crafting components that can easily be adapted for different data rather than hardcoding specifics.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Additional Features:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Implement basic form validation to check if the search input is empty.
+- Handle loading states and display a message or indicator while data is being fetched.
+- Implement error handling to manage any possible issues with API requests.
